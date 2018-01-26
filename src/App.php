@@ -28,14 +28,14 @@ class App
 
         if($route instanceof Route){
 
-            $controllerReflection = new \ReflectionClass($route->controller);
+            $controllerReflection = new \ReflectionClass('App\Controllers\\'.$route->controller);
 
             if($controllerReflection->hasMethod($route->action)){
                 $controller = $controllerReflection->newInstance();
                 $methodReflection = $controllerReflection->getMethod($route->action);
                 $methodReflection->invokeArgs($controller, $route->params);
             } else {
-                echo 'doest has this method';
+                echo 'doest has this action';
             }
         }
         else {
