@@ -9,7 +9,7 @@
         }
     ],
     "autoload": {
-       "psr-4": {"Redia\\Framework": "src/"}
+       "psr-4": {"Redia\\Framework\\": "src/"}
     },
     "minimum-stability": "dev",
     "require": {}
