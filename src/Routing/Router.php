@@ -52,12 +52,11 @@ class Router
     /*
      *  Transform uri path to regexp
      */
-    private function transformToRegExp(string $path): string {
-        //make common case regexp
-        $regexp = '/^'.str_replace('/', '\/', $path).'[\/]*$/';
-
-        //replace params with regexp
-        $regexp = preg_replace('\/{[/w/d_]+\}/i','([\w\d_]+)', $regexp);
+    private function transformToRegexp(string $path): string {
+        // Make common case regexp:
+        $regexp = '/^' . str_replace('/', '\/', $path) . '[\/]*$/';
+        // Replace params with regexp
+        $regexp = preg_replace('/\{[\w\d_]+\}/i', '([\w\d_]+)', $regexp);
 
         return $regexp;
     }
