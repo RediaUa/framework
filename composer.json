@@ -1,0 +1,16 @@
+{
+    "name": "redia/framework",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "RediaUa",
+            "email": "artem.redia@gmail.com"
+        }
+    ],
+    "autoload": {
+       "psr-4": {"Redia\\Framework": "src/"}
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
